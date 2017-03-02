@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">框架动画</string>
+    <string name="str001">方片收集左右滑动</string>
+    <string name="str002">方片收集左右滑动</string>
+    <string name="str003">图片拉伸</string>
+    <string name="str004">图片拉伸扩展</string>
+    <string name="str005">图片拉伸扩展ViewGroup ListView</string>
+    <string name="str006">图片拉伸扩展ViewGroup</string>
+    <string name="str007">图片拉伸扩展ViewGroup ScrollView</string>
+    <string name="str008">图片拉伸扩展ViewGroup WebView</string>
+    <string name="str009">图片拉伸扩展ViewGroup TextView</string>
+</resources>

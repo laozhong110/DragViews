@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.net.com.dragviews">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".entern.MainFrameActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/str001"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".viewgroup.ViewGroupActivity"
+            android:label="@string/str002"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".imageup.ImageUpActivity"
+            android:label="@string/str003"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageupext.ImageUpExtActivity"
+            android:label="@string/str004"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageupext2.ImageupExt2Activity"
+            android:label="@string/str005"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".imageupext2.ImageupExt2ListActivity"
+            android:label="@string/str005"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageupext2.ImageupExt2MainActivity"
+            android:label="@string/str006"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageupext2.ImageupExt2ScrollViewActivity"
+            android:label="@string/str007"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageupext2.ImageupExt2WebviewActivity"
+            android:label="@string/str008"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".imageupext2.ImageupExt2TextActivity"
+            android:label="@string/str009"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

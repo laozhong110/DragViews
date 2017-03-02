@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCliedForFangpian1"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="模拟方片收集左右滑动behavior" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onCliedForFangpian2"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="模拟方片收集左右滑动ViewGroup" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onCliedForTopPicture"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="拉伸顶部图片behavior" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onCliedForTopPicture2"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="拉伸顶部图片2 behavior" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="onCliedForTopPicture3"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="拉伸顶部图片ViewGroup" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.net.com.dragviews.viewgroup.control.SlideViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/slideViewGroup"
+        android:background="#929292">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5ee000"
+            android:padding="8dp"
+            android:text="TV1TV1TV1TV1TV1TV1TV1TV1TV1TV1TV1TV1" />-->
+
+        <!--<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fee000"
+                    android:padding="8dp"
+                    android:text="TV2TV2TV2TV2TV2TV2TV2TV2TV2TV2TV2TV2TV2TV2" />-->
+
+
+        <LinearLayout
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff000000"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tvFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon001"
+                    android:text="全部"
+                    android:textColor="@color/text001"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvFirst_Second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFirst"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="1条"
+                    android:textColor="@color/text002"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/icon002" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tvFirst2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未分类"
+                    android:textColor="@color/text001"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFirst2"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="1条"
+                    android:textColor="@color/text002"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tvThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon003"
+                    android:text="回收站"
+                    android:textColor="@color/text001"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvThird"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:text="1条"
+                    android:textColor="@color/text002"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/btnClearRecycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/left_btn001"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="6dp"
+                    android:text="清空"
+                    android:textColor="@color/text003"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/myFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|left"
+            android:background="#ffeeeeee"
+            android:padding="8dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/btnLongTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我收集的第一张贴纸"
+                        android:textColor="#646464"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@mipmap/icon004" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="使用方片收集，\n能快速收集你的灵感和想法。\n点击V图标完成收集。"
+                    android:textColor="#919191"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="6.5dp"
+                        android:background="@mipmap/icon005" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="无来源"
+                        android:textColor="#D1D1D1"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/diment001"
+                    android:layout_height="@dimen/diment001"
+                    android:background="@mipmap/icon008" />
+
+                <ImageView
+                    android:id="@+id/btnAddInfo"
+                    android:layout_width="@dimen/diment001"
+                    android:layout_height="@dimen/diment001"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon007" />
+
+                <ImageView
+                    android:layout_width="@dimen/diment001"
+                    android:layout_height="@dimen/diment001"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/icon006" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addLongPressTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="80dp"
+                android:background="@mipmap/icon_guide_bottom"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="长安试试"
+                android:textColor="#ff000000"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+    </cn.net.com.dragviews.viewgroup.control.SlideViewGroup>
+</RelativeLayout>
