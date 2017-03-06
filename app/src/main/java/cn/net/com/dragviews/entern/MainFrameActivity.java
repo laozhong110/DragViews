@@ -11,6 +11,7 @@ import cn.net.com.dragviews.imageup.ImageUpActivity;
 import cn.net.com.dragviews.imageupext.ImageUpExtActivity;
 import cn.net.com.dragviews.imageupext2.ImageupExt2MainActivity;
 import cn.net.com.dragviews.viewgroup.ViewGroupActivity;
+import cn.net.com.pull.views.PullRefreshMainActivity;
 
 public class MainFrameActivity extends AppCompatActivity {
 
@@ -38,5 +39,9 @@ public class MainFrameActivity extends AppCompatActivity {
 
     public void onCliedForTopPicture3(View v) {
         startActivity(new Intent(this, ImageupExt2MainActivity.class));
+    }
+
+    public void onCliedForPullRefresh(View v){
+        startActivity(new Intent(this, PullRefreshMainActivity.class));
     }
 }

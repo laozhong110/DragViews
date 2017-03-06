@@ -255,6 +255,10 @@ public class SlideViewGroup extends ViewGroup {
                 int nTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
                 if (Math.abs(distance) >= nTouchSlop){
                     mSliding = ret = true;
+
+                    if (!mScroller.isFinished()) {
+                        mScroller.abortAnimation();
+                    }
                 }else{
                     mSliding = ret = false;
                 }

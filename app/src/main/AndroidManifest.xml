@@ -14,7 +14,6 @@
         <activity
             android:name=".entern.MainFrameActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -67,14 +66,51 @@
             android:name=".imageupext2.ImageupExt2WebviewActivity"
             android:label="@string/str008"
             android:screenOrientation="portrait">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-        <activity android:name=".imageupext2.ImageupExt2TextActivity"
+        <activity
+            android:name=".imageupext2.ImageupExt2TextActivity"
             android:label="@string/str009"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshMainActivity"
+            android:label="@string/str010"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshRecyclerViewActivity"
+            android:label="@string/str011"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshListViewActivity"
+            android:label="@string/str012"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshScrollViewActivity"
+            android:label="@string/str013"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshWebViewActivity"
+            android:label="@string/str014"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.net.com.pull.views.PullRefreshTextViewActivity"
+            android:label="@string/str015"
             android:screenOrientation="portrait"/>
     </application>
 

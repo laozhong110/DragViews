@@ -268,6 +268,10 @@ public class ImageScaleViewGroup extends ViewGroup {
                 int nTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
                 if (Math.abs(distance) >= nTouchSlop) {
                     mSliding = bret = true;
+
+                    if (!mScroller.isFinished()) {
+                        mScroller.abortAnimation();
+                    }
                 } else {
                     mSliding = bret = false;
                 }
