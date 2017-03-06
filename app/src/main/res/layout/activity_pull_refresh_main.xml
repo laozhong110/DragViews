@@ -17,54 +17,45 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onCliedForFangpian1"
+            android:onClick="onCliedForRecyclerView"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="模拟方片收集左右滑动behavior" />
+            android:text="RecyclerView" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="onCliedForFangpian2"
+            android:onClick="onCliedForListView"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="模拟方片收集左右滑动ViewGroup" />
+            android:text="ListView" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="onCliedForTopPicture"
+            android:onClick="onCliedForScrollView"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="拉伸顶部图片behavior" />
+            android:text="ScrollView" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="onCliedForTopPicture2"
+            android:onClick="onCliedForWebView"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="拉伸顶部图片2 behavior" />
+            android:text="WebVie" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="onCliedForTopPicture3"
+            android:onClick="onCliedForTextView"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="拉伸顶部图片ViewGroup" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:onClick="onCliedForPullRefresh"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="下拉刷新 加载更多ViewGroup" />
+            android:text="TextVie" />
     </LinearLayout>
 </ScrollView>

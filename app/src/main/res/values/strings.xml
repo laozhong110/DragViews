@@ -9,4 +9,10 @@
     <string name="str007">图片拉伸扩展ViewGroup ScrollView</string>
     <string name="str008">图片拉伸扩展ViewGroup WebView</string>
     <string name="str009">图片拉伸扩展ViewGroup TextView</string>
+    <string name="str010">下拉刷新和加载更多</string>
+    <string name="str011">下拉刷新和加载更多RecyclerView</string>
+    <string name="str012">下拉刷新和加载更多ListView</string>
+    <string name="str013">下拉刷新和加载更多ScrollView</string>
+    <string name="str014">下拉刷新和加载更多WebView</string>
+    <string name="str015">下拉刷新和加载更多TextView</string>
 </resources>
