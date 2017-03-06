@@ -36,8 +36,11 @@ layout.xml布局
  实现PullRefreshViewGroup.IRefreshLoad接口
  
  PullRefreshViewGroup pullRefreshViewGroup = (PullRefreshViewGroup) findViewById(R.id.pullRefreshViewGroup);   
+ 
  pullRefreshViewGroup.setRefreshLoadListen(this);
+ 
  pullRefreshViewGroup.setHasPullRefresh(true); //可以有下拉刷新 完后调用 pullRefreshViewGroup.setPullRefreshLoadComplete();
+ 
  pullRefreshViewGroup.setHasLoadMore(true);    //可以有上拉加载更多  【WebView和其它的单视图控件应该是不需要这个的】完成后调用 pullRefreshViewGroup.setPullUpLoadMoreComplete();
  
  
