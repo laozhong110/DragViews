@@ -545,10 +545,13 @@ public class PullRefreshViewGroup extends ViewGroup {
         } else {//向下
             int nScrollOffset = 0;
             try {
-                Class c = Class.forName(child1View.getClass().getName());
-                Method computeVerticalScrollOffset = findcomputeVerticalMethod(c, "computeVerticalScrollOffset");//c.getDeclaredMethod("computeVerticalScrollOffset");
-                computeVerticalScrollOffset.setAccessible(true);
-                nScrollOffset = (int) computeVerticalScrollOffset.invoke(child1View);
+                if (null == mComputeVerticalScrollOffset) {
+                    Class c = Class.forName(child1View.getClass().getName());
+                    Method computeVerticalScrollOffset = findcomputeVerticalMethod(c, "computeVerticalScrollOffset");//c.getDeclaredMethod("computeVerticalScrollOffset");
+                    computeVerticalScrollOffset.setAccessible(true);
+                    mComputeVerticalScrollOffset = computeVerticalScrollOffset;
+                }
+                nScrollOffset = (int) mComputeVerticalScrollOffset.invoke(child1View);
             } catch (Exception ex) {
 
             }
