@@ -265,9 +265,15 @@ public class ImageScaleViewGroup extends ViewGroup {
             case MotionEvent.ACTION_MOVE: {
                 float curY = ev.getY();
                 float distance = curY - mPreY;
-                int nTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
-                if (Math.abs(distance) >= nTouchSlop) {
+                if (Math.abs(distance) >= mTouchSlop) {
                     mSliding = bret = true;
+
+                    //修正第一次滑动的卡顿
+                    if (distance > 0) {
+                        mPreY += mTouchSlop;
+                    } else {
+                        mPreY -= mTouchSlop;
+                    }
 
                     if (!mScroller.isFinished()) {
                         mScroller.abortAnimation();
@@ -498,6 +504,8 @@ public class ImageScaleViewGroup extends ViewGroup {
         if (0 != (int) distance) {
             child0View.offsetTopAndBottom((int) distance);
             child1View.offsetTopAndBottom((int) distance);
+
+            requestLayout();//奇酷360这里必须调用, 否则显示有点问题
         }
         if (0 != (int) distanceRemain) {
             if (child1View instanceof ListView) {

@@ -30,7 +30,7 @@ public class SlideViewGroup extends ViewGroup {
     private int mDockType = DOCK_LEFT;
 
     private float mPreXpos = -1;
-
+    int mTouchSlop = 0;
 
     private int mCurOffset = -1;
     private boolean mBscroll = false;
@@ -63,6 +63,8 @@ public class SlideViewGroup extends ViewGroup {
 
     private void init(Context context) {
         mScroller = new Scroller(context);
+
+        mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
     }
 
     public void setOnSlideListen(OnSlideListen onSlideListen){
@@ -252,9 +254,15 @@ public class SlideViewGroup extends ViewGroup {
 
                 //处理滑动冲突
                 float distance = curXpos - mPreXpos;
-                int nTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
-                if (Math.abs(distance) >= nTouchSlop){
+                if (Math.abs(distance) >= mTouchSlop){
                     mSliding = ret = true;
+
+                    //修正第一次滑动的卡顿
+                    if (distance > 0) {
+                        mPreXpos += mTouchSlop;
+                    } else {
+                        mPreXpos -= mTouchSlop;
+                    }
 
                     if (!mScroller.isFinished()) {
                         mScroller.abortAnimation();

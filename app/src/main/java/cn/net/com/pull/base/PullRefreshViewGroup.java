@@ -43,6 +43,7 @@ public class PullRefreshViewGroup extends ViewGroup {
 
     private int mSrcHeightHead = -1;        //下拉刷新layout的原始高度
     private float mPreY = 0f;
+    private float mTouchSlop;               //滑动最小距离
     private boolean mSliding = false;       //是否正在滑动
 
     private ScrollerCompat mScroller;          //平滑滚动接口
@@ -81,6 +82,8 @@ public class PullRefreshViewGroup extends ViewGroup {
 
     private void init(Context context) {
         mScroller = ScrollerCompat.create(context, sQuinticInterpolator);
+
+        mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
     }
 
     static final Interpolator sQuinticInterpolator = new Interpolator() {
@@ -113,11 +116,11 @@ public class PullRefreshViewGroup extends ViewGroup {
         mRefreshLoad = refreshLoad;
     }
 
-    public boolean isPullRefreshLoading(){
+    public boolean isPullRefreshLoading() {
         return mPullRefreshLoading;
     }
 
-    public boolean isLoadingMore(){
+    public boolean isLoadingMore() {
         return mLoadingMore;
     }
 
@@ -260,14 +263,21 @@ public class PullRefreshViewGroup extends ViewGroup {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN: {
                 mPreY = ev.getY();
+                Log.d(TAG, "mPreY:" + String.valueOf(mPreY));
             }
             break;
             case MotionEvent.ACTION_MOVE: {
                 float curY = ev.getY();
                 float distance = curY - mPreY;
-                int nTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
-                if (Math.abs(distance) >= nTouchSlop) {
+                if (Math.abs(distance) >= mTouchSlop) {
                     mSliding = bret = true;
+
+                    //修正第一次滑动的卡顿
+                    if (distance > 0) {
+                        mPreY += mTouchSlop;
+                    } else {
+                        mPreY -= mTouchSlop;
+                    }
 
                     if (!mScroller.isFinished()) {
                         mScroller.abortAnimation();
@@ -301,6 +311,7 @@ public class PullRefreshViewGroup extends ViewGroup {
             case MotionEvent.ACTION_MOVE: {
                 float curY = event.getY();
                 float distance = curY - mPreY;
+                Log.d(TAG, "mPreY:" + String.valueOf(mPreY) + " distance:" + String.valueOf(distance));
                 if (distance != 0) {
                     bret = true;
 
@@ -588,6 +599,8 @@ public class PullRefreshViewGroup extends ViewGroup {
             if (null != mTailView) {
                 mTailView.offsetTopAndBottom((int) distance);
             }
+
+            requestLayout();//奇酷360这里必须调用, 否则显示有点问题
         }
 
         scrollByForMidView(distanceRemain);//外部无法滚动的时候,内部滚动
