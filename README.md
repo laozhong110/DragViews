@@ -44,4 +44,4 @@ layout.xml布局
  pullRefreshViewGroup.setHasLoadMore(true);    //可以有上拉加载更多  【WebView和其它的单视图控件应该是不需要这个的】完成后调用 pullRefreshViewGroup.setPullUpLoadMoreComplete();
  
  
- 
+ 问题 :ListView 还存在问题，尽在完善
