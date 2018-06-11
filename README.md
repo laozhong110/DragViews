@@ -1,6 +1,6 @@
 # DragViews
 Collection of animation frames
-
+test
 
 一，ImageScaleViewGroup 是一个可以拉伸顶部视图的控件(比如顶部的图片控件)  
 支持RecyclerView  , Listview  ,ScrollView ,WebView  和其它的单视图控件
